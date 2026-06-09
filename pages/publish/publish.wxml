@@ -1,0 +1,47 @@
+<view class="publish-page">
+  <scroll-view scroll-y class="publish-scroll">
+    <view class="upload-section">
+      <view wx:for="{{images}}" wx:key="*this" class="upload-item">
+        <image src="{{item}}" mode="aspectFill" class="upload-img" />
+        <view class="upload-delete" data-index="{{index}}" bindtap="onDeleteImage">✕</view>
+      </view>
+      <view wx:if="{{images.length < 9}}" class="upload-add" bindtap="onChooseImages">
+        <text class="add-icon">+</text><text class="add-text">{{images.length}}/9</text>
+      </view>
+    </view>
+
+    <view class="form-group"><input class="input-field" placeholder="商品标题（必填）" value="{{title}}" bindinput="onTitleInput" maxlength="60" /></view>
+    <view class="form-group"><textarea class="textarea-field" placeholder="描述一下商品的情况..." value="{{description}}" bindinput="onDescInput" maxlength="500" /></view>
+
+    <view class="form-group form-row" bindtap="onCategoryTap">
+      <text class="form-label">分类</text><text class="form-value {{categoryId ? '' : 'placeholder'}}">{{categoryName}}</text><text class="form-arrow">›</text>
+    </view>
+
+    <view class="form-group form-row">
+      <text class="form-label">成色</text>
+      <picker mode="selector" range="{{conditionOptions}}" value="{{condition}}" bindchange="onConditionChange">
+        <view class="form-value {{condition ? '' : 'placeholder'}}">{{conditionName}}</view>
+      </picker>
+    </view>
+
+    <view class="form-group form-row-2">
+      <view class="form-col"><text class="form-label">售价 ¥</text><input class="input-field" type="digit" placeholder="必填" value="{{price}}" bindinput="onPriceInput" /></view>
+      <view class="form-col"><text class="form-label">原价 ¥</text><input class="input-field" type="digit" placeholder="选填" value="{{originalPrice}}" bindinput="onOriginalInput" /></view>
+    </view>
+
+    <view class="form-group"><input class="input-field" placeholder="所在地（选填，如「北京·海淀」）" value="{{location}}" bindinput="onLocationInput" maxlength="30" /></view>
+  </scroll-view>
+
+  <view class="submit-bar safe-bottom">
+    <button class="btn-primary" bindtap="onSubmit" disabled="{{submitting}}" style="width:100%">{{submitting ? '发布中...' : (isEdit ? '保存修改' : '发布商品')}}</button>
+  </view>
+
+  <view wx:if="{{showCategoryPicker}}" class="picker-overlay" bindtap="onClosePicker">
+    <view class="picker-sheet" catchtap="">
+      <view class="picker-header"><text>选择分类</text><text class="picker-close" bindtap="onClosePicker">✕</text></view>
+      <view class="picker-list">
+        <view wx:for="{{categories}}" wx:key="id" class="picker-item" data-index="{{index}}" bindtap="onCategorySelect">{{item.name}}</view>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,50 @@
+<view wx:if="{{product}}" class="detail-page">
+  <swiper class="swiper" indicator-dots indicator-color="rgba(255,255,255,0.5)" indicator-active-color="#fff">
+    <swiper-item wx:for="{{product.images}}" wx:key="*this" bindtap="onPreviewImage" data-index="{{index}}">
+      <image src="{{item}}" mode="aspectFill" class="detail-img" />
+    </swiper-item>
+  </swiper>
+
+  <view class="detail-body">
+    <text class="price" style="font-size:48rpx;">{{product.price}}</text>
+    <view class="title-row"><text class="detail-title">{{product.title}}</text></view>
+    <view class="meta-row">
+      <text>{{product.location}}</text><text class="dot">·</text>
+      <text>{{timeText}}</text><text class="dot">·</text>
+      <text>{{product.viewCount}}次浏览</text>
+    </view>
+
+    <view class="divider" />
+    <view class="section">
+      <text class="section-title">商品描述</text>
+      <text class="desc-text">{{product.description || '暂无描述'}}</text>
+    </view>
+
+    <view class="divider" />
+    <view class="section">
+      <text class="section-title">商品信息</text>
+      <view class="info-grid">
+        <view class="info-item"><text class="info-label">成色</text><text class="info-value">{{conditionText}}</text></view>
+        <view class="info-item"><text class="info-label">分类</text><text class="info-value">{{product.categoryName}}</text></view>
+        <view wx:if="{{product.originalPrice}}" class="info-item"><text class="info-label">原价</text><text class="info-value">¥{{product.originalPrice}}</text></view>
+      </view>
+    </view>
+
+    <view class="divider" />
+    <view class="seller-row" bindtap="onSellerTap">
+      <image src="{{product.sellerAvatar}}" class="seller-avatar" mode="aspectFill" />
+      <view class="seller-info">
+        <text class="seller-name">{{product.sellerName}}</text>
+        <text class="seller-arrow">查看评价 ›</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="bottom-bar safe-bottom">
+    <view class="fav-btn {{isFavorited ? 'favorited' : ''}}" bindtap="toggleFavorite">
+      <text>{{isFavorited ? '♥' : '♡'}}</text><text>收藏</text>
+    </view>
+    <button class="btn-outline btn-sm" bindtap="onContact" style="flex:1">联系卖家</button>
+    <button class="btn-primary btn-sm" bindtap="onBuyNow" style="flex:1">立即购买</button>
+  </view>
+</view>
