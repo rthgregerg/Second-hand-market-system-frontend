@@ -1,0 +1,30 @@
+.login-page {
+  min-height: 100vh;
+  background: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  padding: 0 64rpx;
+}
+.brand-section {
+  padding-top: 160rpx;
+  padding-bottom: 80rpx;
+}
+.brand-title {
+  font-size: 64rpx;
+  font-weight: 700;
+  color: #1A1A1A;
+  display: block;
+}
+.brand-sub {
+  font-size: 28rpx;
+  color: #8E8E93;
+  margin-top: 16rpx;
+  display: block;
+}
+.form-section { width: 100%; }
+.switch-link {
+  text-align: center;
+  padding: 24rpx 0;
+  font-size: 28rpx;
+  color: #2B7BD6;
+}

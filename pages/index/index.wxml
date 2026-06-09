@@ -1,0 +1,31 @@
+<view class="home-page">
+  <view class="search-bar" bindtap="onSearch">
+    <view class="search-input">
+      <text class="search-icon">🔍</text>
+      <text class="search-placeholder">搜索商品...</text>
+    </view>
+  </view>
+
+  <scroll-view class="category-scroll" scroll-x enable-flex>
+    <view class="category-item {{activeCategoryId === 0 ? 'active' : ''}}" data-id="{{0}}" bindtap="onCategoryTap">
+      <text>全部</text>
+    </view>
+    <view wx:for="{{categories}}" wx:key="id" class="category-item {{activeCategoryId === item.id ? 'active' : ''}}" data-id="{{item.id}}" bindtap="onCategoryTap">
+      <text>{{item.name}}</text>
+    </view>
+  </scroll-view>
+
+  <view class="waterfall">
+    <view class="waterfall-col">
+      <product-card wx:for="{{leftList}}" wx:key="id" product="{{item}}" />
+    </view>
+    <view class="waterfall-col">
+      <product-card wx:for="{{rightList}}" wx:key="id" product="{{item}}" />
+    </view>
+  </view>
+
+  <view wx:if="{{loading}}" class="loading-more"><text class="loading-text">加载中...</text></view>
+  <view wx:elif="{{!hasMore && products.length > 0}}" class="loading-more"><text class="loading-text">— 没有更多了 —</text></view>
+
+  <empty-state wx:if="{{!loading && products.length === 0}}" text="暂无商品，快来发布第一个吧！" icon="📦" />
+</view>

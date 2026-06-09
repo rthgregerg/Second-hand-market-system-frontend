@@ -1,0 +1,28 @@
+<view class="login-page">
+  <view class="brand-section">
+    <text class="brand-title">二手集市</text>
+    <text class="brand-sub">大学生专属二手交易平台</text>
+  </view>
+
+  <view class="form-section">
+    <block wx:if="{{mode === 'register'}}">
+      <input class="input-field" placeholder="用户名" value="{{username}}" bindinput="onUsernameInput" maxlength="20" />
+      <view style="height:24rpx" />
+      <input class="input-field" type="number" placeholder="手机号" value="{{phone}}" bindinput="onPhoneInput" maxlength="11" />
+      <view style="height:24rpx" />
+    </block>
+
+    <input wx:if="{{mode === 'login'}}" class="input-field" type="number" placeholder="手机号" value="{{account}}" bindinput="onAccountInput" maxlength="11" />
+    <view style="height:24rpx" />
+    <input class="input-field" type="password" placeholder="密码" value="{{password}}" bindinput="onPasswordInput" maxlength="32" />
+    <view style="height:48rpx" />
+
+    <button class="btn-primary" bindtap="onSubmit" style="width:100%">
+      {{mode === 'login' ? '登录' : '注册'}}
+    </button>
+    <view style="height:24rpx" />
+    <view class="switch-link" bindtap="switchMode">
+      <text>{{mode === 'login' ? '没有账号？去注册' : '已有账号？去登录'}}</text>
+    </view>
+  </view>
+</view>
