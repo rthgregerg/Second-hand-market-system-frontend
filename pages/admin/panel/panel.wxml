@@ -23,7 +23,7 @@
         <text class="uname">{{item.nickname || item.username}}</text>
         <text class="uphone">{{item.phone}} · {{item.role}}</text>
       </view>
-      <button class="{{(item.status ?? 0) === 0 ? 'btn-danger' : 'btn-primary'}} btn-sm" bindtap="onToggleUser" data-user="{{item}}">{{(item.status ?? 0) === 0 ? '禁用' : '启用'}}</button>
+      <button class="{{item.status === 1 ? 'btn-primary' : 'btn-danger'}} btn-sm" bindtap="onToggleUser" data-user="{{item}}">{{item.status === 1 ? '启用' : '禁用'}}</button>
     </view>
     <view wx:if="{{loading}}" class="loading-more"><text class="loading-text">加载中...</text></view>
     <empty-state wx:if="{{!loading && users.length === 0}}" text="暂无用户" icon="👤" />
