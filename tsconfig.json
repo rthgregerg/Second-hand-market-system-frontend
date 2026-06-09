@@ -6,21 +6,15 @@
     "strict": true,
     "noImplicitAny": false,
     "moduleResolution": "node",
-    "types": ["miniprogram-api-typings"],
+    "typeRoots": ["./node_modules"],
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "resolveJsonModule": true,
-    "baseUrl": ".",
-    "paths": {
-      "@/*": ["./*"]
-    }
+    "baseUrl": "."
   },
   "include": [
     "**/*.ts"
-  ],
-  "exclude": [
-    "node_modules"
   ]
 }
