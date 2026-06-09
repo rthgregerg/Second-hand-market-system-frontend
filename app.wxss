@@ -1,0 +1,29 @@
+/* app.wxss */
+page {
+  --bg: #F5F5F5;
+  --card: #FFFFFF;
+  --text: #1A1A1A;
+  --text-secondary: #8E8E93;
+  --accent: #2B7BD6;
+  --success: #34C759;
+  --danger: #FF3B30;
+  --divider: #E8E8ED;
+  --tag-bg: #F2F2F7;
+  background-color: var(--bg);
+  font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Helvetica Neue', sans-serif;
+  font-size: 28rpx;
+  color: var(--text);
+  box-sizing: border-box;
+}
+view, text, image, input, button { box-sizing: border-box; }
+.btn-primary { background-color: #2B7BD6; color: #FFFFFF; border-radius: 48rpx; height: 88rpx; line-height: 88rpx; text-align: center; font-size: 32rpx; font-weight: 500; border: none; }
+.btn-secondary { background-color: #F2F2F7; color: #1A1A1A; border-radius: 48rpx; height: 88rpx; line-height: 88rpx; text-align: center; font-size: 32rpx; border: none; }
+.btn-danger { background-color: #FF3B30; color: #FFFFFF; border-radius: 48rpx; height: 88rpx; line-height: 88rpx; text-align: center; font-size: 32rpx; border: none; }
+.btn-sm { height: 64rpx; line-height: 64rpx; font-size: 26rpx; padding: 0 32rpx; }
+.btn-outline { background-color: transparent; border: 2rpx solid #2B7BD6; color: #2B7BD6; border-radius: 48rpx; height: 88rpx; line-height: 84rpx; text-align: center; font-size: 32rpx; }
+.input-field { background-color: #F2F2F7; border-radius: 16rpx; height: 88rpx; padding: 0 24rpx; font-size: 28rpx; width: 100%; }
+.card { background-color: #FFFFFF; border-radius: 24rpx; overflow: hidden; }
+.safe-bottom { padding-bottom: constant(safe-area-inset-bottom); padding-bottom: env(safe-area-inset-bottom); }
+.ellipsis { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.price { font-size: 40rpx; font-weight: 700; color: #1A1A1A; }
+.price::before { content: '¥'; }

@@ -1,0 +1,41 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/message/list/list",
+    "pages/publish/publish",
+    "pages/order/list/list",
+    "pages/user/profile/profile",
+    "pages/product/detail/detail",
+    "pages/search/search",
+    "pages/message/chat/chat",
+    "pages/order/detail/detail",
+    "pages/user/edit-profile/edit-profile",
+    "pages/user/favorites/favorites",
+    "pages/user/my-products/my-products",
+    "pages/user/reviews/reviews",
+    "pages/admin/panel/panel",
+    "pages/auth/login/login"
+  ],
+  "window": {
+    "navigationBarTitleText": "二手集市",
+    "navigationBarBackgroundColor": "#FFFFFF",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#F5F5F5",
+    "backgroundTextStyle": "dark"
+  },
+  "tabBar": {
+    "color": "#8E8E93",
+    "selectedColor": "#1A1A1A",
+    "backgroundColor": "#FFFFFF",
+    "borderStyle": "white",
+    "list": [
+      { "pagePath": "pages/index/index", "text": "首页" },
+      { "pagePath": "pages/message/list/list", "text": "消息" },
+      { "pagePath": "pages/publish/publish", "text": "发布" },
+      { "pagePath": "pages/order/list/list", "text": "订单" },
+      { "pagePath": "pages/user/profile/profile", "text": "我的" }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}
