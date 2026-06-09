@@ -1,5 +1,6 @@
 import { getFavorites, unfavoriteProduct } from '../../../api/product';
 import { formatTime } from '../../../utils/time';
+import '../../../components/empty-state/empty-state';
 
 Page({
   data: { products: [] as Product[], page: 1, hasMore: true, loading: false },

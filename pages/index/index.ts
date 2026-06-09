@@ -1,6 +1,8 @@
 import { searchProducts } from '../../api/product';
 import { getCategoryTree } from '../../api/category';
 import { formatTime } from '../../utils/time';
+import '../../components/product-card/product-card';
+import '../../components/empty-state/empty-state';
 
 Page({
   data: {

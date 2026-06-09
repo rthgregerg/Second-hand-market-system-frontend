@@ -1,6 +1,7 @@
 import { getBoughtOrders, getSoldOrders } from '../../../api/order';
 import { ORDER_STATUS, ORDER_STATUS_COLOR } from '../../../utils/constants';
 import { formatTime } from '../../../utils/time';
+import '../../../components/empty-state/empty-state';
 
 Page({
   data: {

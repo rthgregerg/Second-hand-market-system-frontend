@@ -1,5 +1,7 @@
 import { getUserReviews, getCreditScore } from '../../../api/review';
 import { formatTime } from '../../../utils/time';
+import '../../../components/empty-state/empty-state';
+import '../../../components/star-rating/star-rating';
 
 Page({
   data: { userId: 0, userName: '', reviews: [] as Review[], creditScore: 0, page: 1, hasMore: true, loading: false },

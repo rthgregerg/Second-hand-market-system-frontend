@@ -2,6 +2,7 @@ import { searchProducts } from '../../api/product';
 import { getCategoryTree } from '../../api/category';
 import { CONDITION_MAP } from '../../utils/constants';
 import { formatTime } from '../../utils/time';
+import '../../components/empty-state/empty-state';
 
 Page({
   data: {

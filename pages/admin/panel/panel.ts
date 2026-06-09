@@ -1,4 +1,5 @@
 import { getUsers, toggleUserStatus, getStatistics } from '../../../api/admin';
+import '../../../components/empty-state/empty-state';
 
 Page({
   data: {

@@ -1,4 +1,5 @@
 import { getConversations, getNotifications, getUnreadCount } from '../../../api/message';
+import '../../../components/empty-state/empty-state';
 
 Page({
   data: {

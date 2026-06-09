@@ -1,5 +1,6 @@
 import { getChatMessages } from '../../../api/message';
 import { formatTime } from '../../../utils/time';
+import '../../../components/empty-state/empty-state';
 
 Page({
   data: {

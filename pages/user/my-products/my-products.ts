@@ -1,6 +1,7 @@
 import { getMyProducts, offShelf, onShelf } from '../../../api/product';
 import { formatTime } from '../../../utils/time';
 import { PRODUCT_STATUS } from '../../../utils/constants';
+import '../../../components/empty-state/empty-state';
 
 Page({
   data: {

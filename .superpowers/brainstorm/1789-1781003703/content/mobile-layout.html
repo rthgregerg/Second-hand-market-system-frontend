@@ -1,0 +1,147 @@
+<h2>手机端首页布局 — 选一种</h2>
+<p class="subtitle">宽度 375px 模拟真实手机屏幕</p>
+
+<div class="options">
+  <div class="option" data-choice="a" onclick="toggleSelect(this)">
+    <div class="letter">A</div>
+    <div class="content">
+      <h3>闲鱼式：双列瀑布流</h3>
+      <p>顶部搜索栏 + 分类图标 + 双列商品瀑布流。最主流，用户最熟悉。</p>
+      <div class="mockup" style="max-width:375px;margin:0 auto;">
+        <div class="mockup-header">📱 首页</div>
+        <div class="mockup-body" style="padding:0;">
+          <div style="background:#fff;padding:10px 12px;display:flex;align-items:center;gap:8px;">
+            <input class="mock-input" placeholder="🔍 搜索商品" style="flex:1;border-radius:20px;padding:8px 16px;">
+            <span style="font-size:20px;">🔔</span>
+          </div>
+          <div style="display:flex;justify-content:space-around;padding:8px 4px;background:#fff;border-bottom:1px solid #eee;">
+            <div style="text-align:center;font-size:12px;"><div style="font-size:24px;">📱</div>手机</div>
+            <div style="text-align:center;font-size:12px;"><div style="font-size:24px;">💻</div>电脑</div>
+            <div style="text-align:center;font-size:12px;"><div style="font-size:24px;">🏠</div>家居</div>
+            <div style="text-align:center;font-size:12px;"><div style="font-size:24px;">👗</div>服饰</div>
+            <div style="text-align:center;font-size:12px;"><div style="font-size:24px;">🎮</div>数码</div>
+            <div style="text-align:center;font-size:12px;"><div style="font-size:24px;">📚</div>图书</div>
+          </div>
+          <div style="display:flex;gap:8px;padding:10px;">
+            <div style="flex:1;">
+              <div class="placeholder" style="height:180px;border-radius:8px;margin-bottom:6px;">📷</div>
+              <div style="font-size:14px;"><strong>¥2,500</strong></div>
+              <div style="font-size:12px;color:#333;">iPhone 14 九成新</div>
+              <div style="font-size:11px;color:#999;">📍 朝阳区</div>
+              <div class="placeholder" style="height:120px;border-radius:8px;margin-top:10px;margin-bottom:6px;">📷</div>
+              <div style="font-size:14px;"><strong>¥350</strong></div>
+              <div style="font-size:12px;color:#333;">机械键盘 Cherry</div>
+              <div style="font-size:11px;color:#999;">📍 天河区</div>
+            </div>
+            <div style="flex:1;">
+              <div class="placeholder" style="height:120px;border-radius:8px;margin-bottom:6px;">📷</div>
+              <div style="font-size:14px;"><strong>¥800</strong></div>
+              <div style="font-size:12px;color:#333;">宜家书桌 95新</div>
+              <div style="font-size:11px;color:#999;">📍 海淀区</div>
+              <div class="placeholder" style="height:180px;border-radius:8px;margin-top:10px;margin-bottom:6px;">📷</div>
+              <div style="font-size:14px;"><strong>¥15,000</strong></div>
+              <div style="font-size:12px;color:#333;">MacBook Pro M3</div>
+              <div style="font-size:11px;color:#999;">📍 浦东新区</div>
+            </div>
+          </div>
+          <div style="display:flex;justify-content:space-around;padding:12px;background:#fff;border-top:1px solid #eee;">
+            <div style="text-align:center;font-size:12px;color:#1677ff;">🏠 首页</div>
+            <div style="text-align:center;font-size:12px;color:#999;">❤️ 收藏</div>
+            <div style="text-align:center;font-size:12px;color:#999;position:relative;">➕ <span style="background:#1677ff;color:#fff;padding:2px 8px;border-radius:10px;">发布</span></div>
+            <div style="text-align:center;font-size:12px;color:#999;">💬 消息</div>
+            <div style="text-align:center;font-size:12px;color:#999;">👤 我的</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="option" data-choice="b" onclick="toggleSelect(this)">
+    <div class="letter">B</div>
+    <div class="content">
+      <h3>Facebook式：大图卡片流</h3>
+      <p>单列大图卡片，商品图全幅展示。适合以图驱动的浏览体验。</p>
+      <div class="mockup" style="max-width:375px;margin:0 auto;">
+        <div class="mockup-header">📱 首页</div>
+        <div class="mockup-body" style="padding:0;">
+          <div style="background:#fff;padding:10px 12px;display:flex;align-items:center;gap:8px;border-bottom:1px solid #eee;">
+            <span style="font-weight:bold;font-size:18px;">🛒 二手集市</span>
+            <span style="flex:1;"></span>
+            <span style="font-size:20px;">🔍</span>
+            <span style="font-size:20px;">🔔</span>
+          </div>
+          <div style="display:flex;gap:8px;overflow-x:auto;padding:10px 12px;">
+            <span style="background:#1677ff;color:#fff;padding:4px 14px;border-radius:16px;font-size:13px;white-space:nowrap;">推荐</span>
+            <span style="background:#f0f0f0;padding:4px 14px;border-radius:16px;font-size:13px;white-space:nowrap;">手机数码</span>
+            <span style="background:#f0f0f0;padding:4px 14px;border-radius:16px;font-size:13px;white-space:nowrap;">家居家具</span>
+            <span style="background:#f0f0f0;padding:4px 14px;border-radius:16px;font-size:13px;white-space:nowrap;">服装鞋帽</span>
+          </div>
+          <div style="padding:8px 0;">
+            <div style="margin:0 12px 12px;background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 1px 3px rgba(0,0,0,0.1);">
+              <div class="placeholder" style="height:200px;border-radius:0;">📷 商品大图</div>
+              <div style="padding:12px;">
+                <div style="font-size:18px;font-weight:bold;">¥2,500</div>
+                <div style="font-size:14px;color:#333;">iPhone 14 256G 国行 九成新</div>
+                <div style="font-size:12px;color:#999;margin-top:4px;">朝阳区 · 3小时前</div>
+              </div>
+            </div>
+            <div style="margin:0 12px 12px;background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 1px 3px rgba(0,0,0,0.1);">
+              <div class="placeholder" style="height:200px;border-radius:0;">📷 商品大图</div>
+              <div style="padding:12px;">
+                <div style="font-size:18px;font-weight:bold;">¥800</div>
+                <div style="font-size:14px;color:#333;">宜家书桌 白色 几乎全新 自提</div>
+                <div style="font-size:12px;color:#999;margin-top:4px;">海淀区 · 1天前</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="option" data-choice="c" onclick="toggleSelect(this)">
+    <div class="letter">C</div>
+    <div class="content">
+      <h3>混合式：分类主导 + 限量推荐</h3>
+      <p>首页突出分类浏览，每类展示少量精选商品。适合品类多、引导分类逛的场景。</p>
+      <div class="mockup" style="max-width:375px;margin:0 auto;">
+        <div class="mockup-header">📱 首页</div>
+        <div class="mockup-body" style="padding:0;">
+          <div style="background:#1677ff;color:#fff;padding:12px;text-align:center;font-weight:bold;font-size:17px;">
+            🛒 二手集市
+          </div>
+          <div style="background:#fff;padding:10px 12px;">
+            <input class="mock-input" placeholder="🔍 搜一搜你想要的..." style="width:100%;border-radius:20px;padding:10px 16px;">
+          </div>
+          <div style="display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:0;padding:16px 8px;background:#fff;text-align:center;">
+            <div style="padding:8px;"><div style="font-size:32px;">📱</div><div style="font-size:11px;margin-top:4px;">手机</div></div>
+            <div style="padding:8px;"><div style="font-size:32px;">💻</div><div style="font-size:11px;margin-top:4px;">电脑</div></div>
+            <div style="padding:8px;"><div style="font-size:32px;">🏠</div><div style="font-size:11px;margin-top:4px;">家居</div></div>
+            <div style="padding:8px;"><div style="font-size:32px;">👗</div><div style="font-size:11px;margin-top:4px;">服饰</div></div>
+            <div style="padding:8px;"><div style="font-size:32px;">🎮</div><div style="font-size:11px;margin-top:4px;">数码</div></div>
+            <div style="padding:8px;"><div style="font-size:32px;">📚</div><div style="font-size:11px;margin-top:4px;">图书</div></div>
+            <div style="padding:8px;"><div style="font-size:32px;">🚗</div><div style="font-size:11px;margin-top:4px;">出行</div></div>
+            <div style="padding:8px;"><div style="font-size:32px;">📦</div><div style="font-size:11px;margin-top:4px;">全部分类</div></div>
+          </div>
+          <div style="background:#fff;margin-top:8px;padding:12px;">
+            <div style="font-weight:bold;margin-bottom:10px;">🔥 猜你喜欢</div>
+            <div style="display:flex;gap:10px;overflow-x:auto;">
+              <div style="min-width:140px;background:#f8f8f8;border-radius:8px;overflow:hidden;">
+                <div class="placeholder" style="height:100px;">📷</div>
+                <div style="padding:8px;"><strong>¥2,500</strong><br><span style="font-size:12px;">iPhone 14</span></div>
+              </div>
+              <div style="min-width:140px;background:#f8f8f8;border-radius:8px;overflow:hidden;">
+                <div class="placeholder" style="height:100px;">📷</div>
+                <div style="padding:8px;"><strong>¥800</strong><br><span style="font-size:12px;">宜家书桌</span></div>
+              </div>
+              <div style="min-width:140px;background:#f8f8f8;border-radius:8px;overflow:hidden;">
+                <div class="placeholder" style="height:100px;">📷</div>
+                <div style="padding:8px;"><strong>¥15,000</strong><br><span style="font-size:12px;">MacBook Pro</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

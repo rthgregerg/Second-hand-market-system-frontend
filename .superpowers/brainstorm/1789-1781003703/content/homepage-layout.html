@@ -1,0 +1,127 @@
+<h2>首页商品流布局 — 选一种风格</h2>
+<p class="subtitle">参考 Facebook Marketplace，你需要哪种主浏览体验？</p>
+
+<div class="options">
+  <div class="option" data-choice="a" onclick="toggleSelect(this)">
+    <div class="letter">A</div>
+    <div class="content">
+      <h3>瀑布流卡片式（Facebook Marketplace 风格）</h3>
+      <p>两列/四列自适应瀑布流，大图突出，配价格和地点标签。适合"逛"式浏览，强调图片吸引力。</p>
+      <div class="mockup">
+        <div class="mockup-header">桌面端</div>
+        <div class="mockup-body">
+          <div class="mock-nav">🔍 搜索 | 分类 ▼ | 筛选 | 价格范围</div>
+          <div style="display:flex;gap:12px;flex-wrap:wrap;padding:16px;">
+            <div style="flex:1;min-width:180px;background:#f0f0f0;border-radius:8px;padding:12px;">
+              <div class="placeholder" style="height:140px;border-radius:6px;">📷</div>
+              <div style="margin-top:8px;"><strong>¥2,500</strong></div>
+              <div style="font-size:13px;color:#666;">iPhone 14 九成新</div>
+              <div style="font-size:12px;color:#999;">📍 朝阳区</div>
+            </div>
+            <div style="flex:1;min-width:180px;background:#f0f0f0;border-radius:8px;padding:12px;">
+              <div class="placeholder" style="height:100px;border-radius:6px;">📷</div>
+              <div style="margin-top:8px;"><strong>¥800</strong></div>
+              <div style="font-size:13px;color:#666;">宜家书桌 95新</div>
+              <div style="font-size:12px;color:#999;">📍 海淀区</div>
+            </div>
+            <div style="flex:1;min-width:180px;background:#f0f0f0;border-radius:8px;padding:12px;">
+              <div class="placeholder" style="height:160px;border-radius:6px;">📷</div>
+              <div style="margin-top:8px;"><strong>¥15,000</strong></div>
+              <div style="font-size:13px;color:#666;">MacBook Pro M3</div>
+              <div style="font-size:12px;color:#999;">📍 浦东新区</div>
+            </div>
+            <div style="flex:1;min-width:180px;background:#f0f0f0;border-radius:8px;padding:12px;">
+              <div class="placeholder" style="height:120px;border-radius:6px;">📷</div>
+              <div style="margin-top:8px;"><strong>¥350</strong></div>
+              <div style="font-size:13px;color:#666;">机械键盘 Cherry</div>
+              <div style="font-size:12px;color:#999;">📍 天河区</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="option" data-choice="b" onclick="toggleSelect(this)">
+    <div class="letter">B</div>
+    <div class="content">
+      <h3>列表式 + 缩略图（闲鱼风格）</h3>
+      <p>垂直列表，每行一个商品：左图右信息，支持长描述。适合"挑"式浏览，信息密度高。</p>
+      <div class="mockup">
+        <div class="mockup-header">移动端优先</div>
+        <div class="mockup-body" style="max-width:400px;margin:0 auto;">
+          <div class="mock-nav">🔍 搜索商品</div>
+          <div style="padding:8px;">
+            <div style="display:flex;gap:12px;padding:12px 0;border-bottom:1px solid #eee;">
+              <div class="placeholder" style="width:100px;height:100px;border-radius:6px;flex-shrink:0;">📷</div>
+              <div style="flex:1;">
+                <div style="font-weight:bold;">¥2,500</div>
+                <div style="font-size:14px;">iPhone 14 九成新 256G 国行</div>
+                <div style="font-size:12px;color:#999;">朝阳区 · 3小时前 · 58人浏览</div>
+              </div>
+            </div>
+            <div style="display:flex;gap:12px;padding:12px 0;border-bottom:1px solid #eee;">
+              <div class="placeholder" style="width:100px;height:100px;border-radius:6px;flex-shrink:0;">📷</div>
+              <div style="flex:1;">
+                <div style="font-weight:bold;">¥800</div>
+                <div style="font-size:14px;">宜家书桌 95新 自提</div>
+                <div style="font-size:12px;color:#999;">海淀区 · 1天前 · 120人浏览</div>
+              </div>
+            </div>
+            <div style="display:flex;gap:12px;padding:12px 0;border-bottom:1px solid #eee;">
+              <div class="placeholder" style="width:100px;height:100px;border-radius:6px;flex-shrink:0;">📷</div>
+              <div style="flex:1;">
+                <div style="font-weight:bold;">¥350</div>
+                <div style="font-size:14px;">机械键盘 Cherry MX 红轴</div>
+                <div style="font-size:12px;color:#999;">天河区 · 2天前 · 43人浏览</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="option" data-choice="c" onclick="toggleSelect(this)">
+    <div class="letter">C</div>
+    <div class="content">
+      <h3>混合式（分类导航 + 瀑布流）</h3>
+      <p>顶部横向分类滑块 + 下方瀑布流商品，支持按分类快速切换。适合品类丰富、分类浏览场景。</p>
+      <div class="mockup">
+        <div class="mockup-header">分类导航</div>
+        <div class="mockup-body">
+          <div style="display:flex;gap:8px;overflow-x:auto;padding:12px 16px;background:#fff;border-bottom:1px solid #eee;">
+            <div class="mock-button" style="border-radius:20px;white-space:nowrap;">🔥 推荐</div>
+            <div class="mock-button" style="border-radius:20px;white-space:nowrap;">📱 手机</div>
+            <div class="mock-button" style="border-radius:20px;white-space:nowrap;">💻 电脑</div>
+            <div class="mock-button" style="border-radius:20px;white-space:nowrap;">🏠 家居</div>
+            <div class="mock-button" style="border-radius:20px;white-space:nowrap;">👗 服饰</div>
+            <div class="mock-button" style="border-radius:20px;white-space:nowrap;">🎮 数码</div>
+            <div class="mock-button" style="border-radius:20px;white-space:nowrap;">📚 图书</div>
+            <div class="mock-button" style="border-radius:20px;white-space:nowrap;">🎵 其他</div>
+          </div>
+          <div style="display:flex;gap:12px;flex-wrap:wrap;padding:16px;">
+            <div style="flex:1;min-width:160px;background:#f0f0f0;border-radius:8px;padding:10px;">
+              <div class="placeholder" style="height:130px;border-radius:6px;">📷</div>
+              <div><strong>¥2,500</strong></div>
+              <div style="font-size:13px;">iPhone 14</div>
+              <div style="font-size:12px;color:#999;">📍 朝阳区</div>
+            </div>
+            <div style="flex:1;min-width:160px;background:#f0f0f0;border-radius:8px;padding:10px;">
+              <div class="placeholder" style="height:90px;border-radius:6px;">📷</div>
+              <div><strong>¥800</strong></div>
+              <div style="font-size:13px;">宜家书桌</div>
+              <div style="font-size:12px;color:#999;">📍 海淀区</div>
+            </div>
+            <div style="flex:1;min-width:160px;background:#f0f0f0;border-radius:8px;padding:10px;">
+              <div class="placeholder" style="height:150px;border-radius:6px;">📷</div>
+              <div><strong>¥15,000</strong></div>
+              <div style="font-size:13px;">MacBook Pro</div>
+              <div style="font-size:12px;color:#999;">📍 浦东新区</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
