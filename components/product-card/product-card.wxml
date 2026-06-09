@@ -1,0 +1,15 @@
+<view class="product-card card" bindtap="onTap">
+  <view class="image-wrap">
+    <image src="{{product.images[0]}}" mode="aspectFill" class="product-image" lazy-load />
+    <view wx:if="{{product.images.length > 1}}" class="image-count">{{product.images.length}}图</view>
+  </view>
+  <view class="card-info">
+    <text class="price">{{product.price}}</text>
+    <text class="title ellipsis">{{product.title}}</text>
+    <view class="meta">
+      <text class="location ellipsis">{{product.location || '未知'}}</text>
+      <text class="dot">·</text>
+      <text class="time">{{product.createdAt}}</text>
+    </view>
+  </view>
+</view>

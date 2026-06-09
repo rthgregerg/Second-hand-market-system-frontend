@@ -1,0 +1,5 @@
+<view class="star-rating">
+  <text wx:for="{{stars}}" wx:key="index" class="star {{readonly ? '' : 'tappable'}}" data-index="{{index}}" bindtap="onTap" style="font-size: {{size}}rpx;">
+    {{item === 1 ? '★' : '☆'}}
+  </text>
+</view>

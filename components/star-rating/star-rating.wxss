@@ -1,0 +1,3 @@
+.star-rating { display: flex; align-items: center; }
+.star { color: #FFB800; margin-right: 4rpx; }
+.star.tappable { padding: 8rpx; }
