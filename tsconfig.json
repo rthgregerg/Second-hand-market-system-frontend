@@ -5,13 +5,12 @@
     "lib": ["ES2017"],
     "strict": true,
     "noImplicitAny": false,
-    "moduleResolution": "node10",
+    "moduleResolution": "node",
     "types": ["miniprogram-api-typings"],
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true,
-    "ignoreDeprecations": "6.0"
+    "forceConsistentCasingInFileNames": true
   },
   "include": [
     "typings/**/*.d.ts",
