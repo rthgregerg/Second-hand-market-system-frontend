@@ -5,6 +5,18 @@ interface RequestOptions {
   isUpload?: boolean;
 }
 
+function cleanData(data: any): any {
+  if (data == null) return data;
+  if (Array.isArray(data)) return data;
+  const result: Record<string, any> = {};
+  for (const [k, v] of Object.entries(data)) {
+    if (v !== undefined && v !== null && v !== '') {
+      result[k] = v;
+    }
+  }
+  return result;
+}
+
 export function request<T = any>(
   method: 'GET' | 'POST' | 'PUT' | 'DELETE',
   url: string,
@@ -13,6 +25,15 @@ export function request<T = any>(
 ): Promise<ApiResult<T>> {
   const app = getApp<IAppOption>();
   const token = app.globalData.token;
+
+  // Skip authenticated requests when no token (prevent 403 spam)
+  if (!token && !url.startsWith('/api/v1/auth') && method === 'GET') {
+    const publicPaths = ['/api/v1/products', '/api/v1/categories'];
+    const isPublic = publicPaths.some(p => url.startsWith(p));
+    if (!isPublic) {
+      return Promise.reject({ code: 401, message: '未登录' });
+    }
+  }
 
   if (options.showLoading) {
     wx.showLoading({ title: '加载中...', mask: true });
@@ -25,6 +46,8 @@ export function request<T = any>(
   if (!options.isUpload) {
     header['content-type'] = 'application/json';
   }
+
+  data = method === 'GET' ? cleanData(data) : data;
 
   return new Promise((resolve, reject) => {
     wx.request({

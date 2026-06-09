@@ -1,7 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.uploadImages = uploadImages;
-exports.uploadMultipleImages = uploadMultipleImages;
+exports.uploadMultipleImages = exports.uploadImages = void 0;
 const BASE_URL = 'http://localhost:8080';
 function uploadImages(files) {
     const app = getApp();
@@ -22,6 +21,7 @@ function uploadImages(files) {
         });
     });
 }
+exports.uploadImages = uploadImages;
 async function uploadMultipleImages(filePaths) {
     const urls = [];
     for (const path of filePaths) {
@@ -30,3 +30,4 @@ async function uploadMultipleImages(filePaths) {
     }
     return urls;
 }
+exports.uploadMultipleImages = uploadMultipleImages;

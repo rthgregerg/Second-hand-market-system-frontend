@@ -1,7 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.formatTime = formatTime;
-exports.formatDateTime = formatDateTime;
+exports.formatDateTime = exports.formatTime = void 0;
 function formatTime(dateStr) {
     if (!dateStr)
         return '';
@@ -27,6 +26,7 @@ function formatTime(dateStr) {
     const d = String(date.getDate()).padStart(2, '0');
     return `${y}-${m}-${d}`;
 }
+exports.formatTime = formatTime;
 function formatDateTime(dateStr) {
     if (!dateStr)
         return '';
@@ -38,3 +38,4 @@ function formatDateTime(dateStr) {
     const m = String(date.getMinutes()).padStart(2, '0');
     return `${y}-${M}-${d} ${h}:${m}`;
 }
+exports.formatDateTime = formatDateTime;
