@@ -1,0 +1,14 @@
+<view class="chat-page">
+  <scroll-view scroll-y class="chat-list" scroll-with-animation scroll-into-view="{{scrollToView}}">
+    <view wx:for="{{messages}}" wx:key="id" id="msg-{{item.id}}" class="msg-row {{item.senderId === appUserId ? 'msg-right' : 'msg-left'}}">
+      <view class="msg-bubble {{item.senderId === appUserId ? 'msg-mine' : 'msg-other'}}">
+        <text>{{item.content}}</text>
+      </view>
+    </view>
+    <empty-state wx:if="{{messages.length === 0}}" text="开始聊天吧" icon="💬" />
+  </scroll-view>
+  <view class="input-bar safe-bottom">
+    <input class="chat-input" placeholder="输入消息..." value="{{inputText}}" bindinput="onInput" bindconfirm="onSend" />
+    <button class="btn-primary btn-sm" bindtap="onSend" style="margin-left:16rpx;">发送</button>
+  </view>
+</view>

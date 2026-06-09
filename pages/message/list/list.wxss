@@ -1,0 +1,23 @@
+.message-page { min-height: 100vh; background: #F5F5F5; }
+.notify-entry { display: flex; align-items: center; padding: 24rpx; background: #fff; margin-bottom: 16rpx; }
+.notify-icon { font-size: 44rpx; margin-right: 16rpx; }
+.notify-title { flex: 1; font-size: 30rpx; font-weight: 500; }
+.notify-badge { background: #FF3B30; color: #fff; font-size: 20rpx; padding: 4rpx 12rpx; border-radius: 24rpx; margin-right: 8rpx; }
+.notify-arrow { font-size: 36rpx; color: #C7C7CC; }
+.conv-title { padding: 16rpx 24rpx; font-size: 24rpx; color: #8E8E93; }
+.conv-item { display: flex; align-items: center; padding: 20rpx 24rpx; background: #fff; border-bottom: 1rpx solid #F2F2F7; }
+.conv-avatar { width: 96rpx; height: 96rpx; border-radius: 50%; background: #F2F2F7; }
+.conv-info { flex: 1; margin-left: 20rpx; overflow: hidden; }
+.conv-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8rpx; }
+.conv-name { font-size: 30rpx; font-weight: 500; }
+.conv-time { font-size: 22rpx; color: #C7C7CC; }
+.conv-preview { font-size: 26rpx; color: #8E8E93; display: block; }
+.conv-unread { background: #FF3B30; color: #fff; font-size: 20rpx; min-width: 36rpx; height: 36rpx; line-height: 36rpx; text-align: center; border-radius: 18rpx; padding: 0 8rpx; margin-left: 12rpx; }
+.notify-overlay { position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.4); z-index: 1000; display: flex; align-items: flex-end; }
+.notify-sheet { background: #fff; width: 100%; border-radius: 24rpx 24rpx 0 0; max-height: 70vh; overflow-y: auto; }
+.sheet-header { display: flex; justify-content: space-between; align-items: center; padding: 24rpx; border-bottom: 1rpx solid #E8E8ED; font-size: 32rpx; font-weight: 600; }
+.sheet-close { font-size: 36rpx; color: #8E8E93; }
+.notify-item { padding: 20rpx 24rpx; border-bottom: 1rpx solid #F2F2F7; }
+.notify-item-title { font-size: 28rpx; font-weight: 500; display: block; }
+.notify-item-content { font-size: 26rpx; color: #8E8E93; margin-top: 8rpx; display: block; }
+.notify-item-time { font-size: 22rpx; color: #C7C7CC; margin-top: 8rpx; display: block; }

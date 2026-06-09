@@ -1,0 +1,11 @@
+.order-detail-page { min-height: 100vh; background: #F5F5F5; padding-bottom: 120rpx; }
+.status-banner { padding: 48rpx 32rpx; display: flex; align-items: center; justify-content: center; }
+.status-text { font-size: 40rpx; font-weight: 700; color: #fff; }
+.detail-section { margin: 16rpx 24rpx; padding: 24rpx; }
+.info-row { display: flex; justify-content: space-between; align-items: center; padding: 12rpx 0; }
+.info-label { font-size: 28rpx; color: #8E8E93; }
+.info-value { font-size: 28rpx; color: #1A1A1A; }
+.section-title { font-size: 28rpx; font-weight: 600; display: block; margin-bottom: 16rpx; }
+.timeline-item { display: flex; align-items: center; padding: 12rpx 0; font-size: 26rpx; color: #3C3C43; }
+.tl-dot { width: 16rpx; height: 16rpx; border-radius: 50%; background: #E8E8ED; margin-right: 16rpx; flex-shrink: 0; }
+.action-bar { position: fixed; bottom: 0; left: 0; right: 0; display: flex; gap: 24rpx; padding: 16rpx 24rpx; background: #fff; border-top: 1rpx solid #E8E8ED; }

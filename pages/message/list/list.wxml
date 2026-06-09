@@ -1,0 +1,35 @@
+<view class="message-page">
+  <view class="notify-entry" bindtap="loadNotifications">
+    <text class="notify-icon">🔔</text>
+    <text class="notify-title">系统通知</text>
+    <view wx:if="{{unreadNotificationCount > 0}}" class="notify-badge">{{unreadNotificationCount > 99 ? '99+' : unreadNotificationCount}}</view>
+    <text class="notify-arrow">›</text>
+  </view>
+
+  <view class="conv-title"><text>消息</text></view>
+  <view wx:for="{{conversations}}" wx:key="targetUserId" class="conv-item" bindtap="onChatTap" data-id="{{item.targetUserId}}" data-name="{{item.targetUserName}}">
+    <image src="{{item.targetUserAvatar}}" class="conv-avatar" mode="aspectFill" />
+    <view class="conv-info">
+      <view class="conv-top">
+        <text class="conv-name">{{item.targetUserName}}</text>
+        <text class="conv-time">{{item.lastMessageTime}}</text>
+      </view>
+      <text class="conv-preview ellipsis">{{item.lastMessage}}</text>
+    </view>
+    <view wx:if="{{item.unreadCount > 0}}" class="conv-unread">{{item.unreadCount > 99 ? '99+' : item.unreadCount}}</view>
+  </view>
+
+  <empty-state wx:if="{{conversations.length === 0}}" text="暂无消息" icon="💬" />
+
+  <view wx:if="{{showNotifications}}" class="notify-overlay" bindtap="hideNotifications">
+    <view class="notify-sheet" catchtap="">
+      <view class="sheet-header"><text>系统通知</text><text class="sheet-close" bindtap="hideNotifications">✕</text></view>
+      <view wx:for="{{notifications}}" wx:key="id" class="notify-item">
+        <text class="notify-item-title">{{item.title}}</text>
+        <text class="notify-item-content">{{item.content}}</text>
+        <text class="notify-item-time">{{item.createdAt}}</text>
+      </view>
+      <empty-state wx:if="{{notifications.length === 0}}" text="暂无通知" icon="🔔" />
+    </view>
+  </view>
+</view>

@@ -1,0 +1,30 @@
+<view class="order-page">
+  <view class="top-tabs">
+    <view class="tab {{tabIndex === 0 ? 'active' : ''}}" data-tab="0" bindtap="onTabChange">我买到的</view>
+    <view class="tab {{tabIndex === 1 ? 'active' : ''}}" data-tab="1" bindtap="onTabChange">我卖出的</view>
+  </view>
+  <scroll-view class="status-scroll" scroll-x enable-flex>
+    <view wx:for="{{statusOptions}}" wx:key="*this" class="status-chip {{statusFilter === index ? 'active' : ''}}" data-status="{{index}}" bindtap="onStatusFilter">
+      <text>{{item}}</text>
+    </view>
+  </scroll-view>
+  <scroll-view scroll-y class="order-list" bindscrolltolower="onReachBottom">
+    <view wx:for="{{orders}}" wx:key="id" class="order-card card" bindtap="onOrderTap" data-id="{{item.id}}">
+      <view class="order-header">
+        <text class="order-no">订单号: {{item.orderNo}}</text>
+        <text class="order-status" style="color:{{statusColor[item.status]}}">{{item.statusText}}</text>
+      </view>
+      <view class="order-product">
+        <image src="{{item.productImage}}" mode="aspectFill" class="order-prod-img" />
+        <view class="order-prod-info">
+          <text class="order-prod-title ellipsis">{{item.productTitle}}</text>
+          <text class="price" style="font-size:32rpx;">{{item.amount}}</text>
+        </view>
+      </view>
+      <view class="order-footer"><text class="order-time">{{item.createdAt}}</text></view>
+    </view>
+    <view wx:if="{{loading}}" class="loading-more"><text class="loading-text">加载中...</text></view>
+    <view wx:elif="{{!hasMore && orders.length > 0}}" class="loading-more"><text class="loading-text">— 没有更多了 —</text></view>
+    <empty-state wx:if="{{!loading && orders.length === 0}}" text="暂无订单" icon="📋" />
+  </scroll-view>
+</view>

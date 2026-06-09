@@ -1,0 +1,24 @@
+<view wx:if="{{order}}" class="order-detail-page">
+  <view class="status-banner" style="background:{{statusColor}}">
+    <text class="status-text">{{order.statusText}}</text>
+  </view>
+  <view class="detail-section card">
+    <view class="info-row"><text class="info-label">订单编号</text><text class="info-value">{{order.orderNo}}</text></view>
+    <view class="info-row"><text class="info-label">商品名称</text><text class="info-value">{{order.productTitle}}</text></view>
+    <view class="info-row"><text class="info-label">订单金额</text><text class="info-value price">{{order.amount}}</text></view>
+    <view class="info-row"><text class="info-label">支付方式</text><text class="info-value">{{order.paymentMethod || '-'}}</text></view>
+    <view wx:if="{{order.remark}}" class="info-row"><text class="info-label">备注</text><text class="info-value">{{order.remark}}</text></view>
+  </view>
+  <view class="detail-section card">
+    <text class="section-title">时间线</text>
+    <view wx:if="{{order.createdAt}}" class="timeline-item"><text class="tl-dot" /><text>创建：{{order.createdAt}}</text></view>
+    <view wx:if="{{order.paidAt}}" class="timeline-item"><text class="tl-dot" /><text>支付：{{order.paidAt}}</text></view>
+    <view wx:if="{{order.shippedAt}}" class="timeline-item"><text class="tl-dot" /><text>发货：{{order.shippedAt}}</text></view>
+    <view wx:if="{{order.receivedAt}}" class="timeline-item"><text class="tl-dot" /><text>收货：{{order.receivedAt}}</text></view>
+    <view wx:if="{{order.completedAt}}" class="timeline-item"><text class="tl-dot" /><text>完成：{{order.completedAt}}</text></view>
+    <view wx:if="{{order.canceledAt}}" class="timeline-item"><text class="tl-dot" /><text>取消：{{order.canceledAt}}</text></view>
+  </view>
+  <view class="action-bar safe-bottom">
+    <button wx:for="{{actions}}" wx:key="*this" class="{{item === 'cancel' || item === 'refund' ? 'btn-danger' : 'btn-primary'}}" bindtap="doAction" data-action="{{item}}">{{getActionLabel(item)}}</button>
+  </view>
+</view>
