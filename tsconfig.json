@@ -5,16 +5,16 @@
     "lib": ["ES2017"],
     "strict": true,
     "noImplicitAny": false,
-    "moduleResolution": "node",
-    "typeRoots": ["./node_modules"],
+    "moduleResolution": "node10",
+    "types": ["miniprogram-api-typings"],
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
-    "resolveJsonModule": true,
-    "baseUrl": "."
+    "ignoreDeprecations": "6.0"
   },
   "include": [
+    "typings/**/*.d.ts",
     "**/*.ts"
   ]
 }

@@ -43,7 +43,7 @@ Page({
   async onBuyNow() {
     const p = this.data.product;
     if (!p) return;
-    const app = getApp<GlobalData>();
+    const app = getApp<IAppOption>();
     if (!app.globalData.token) { wx.navigateTo({ url: '/pages/auth/login/login' }); return; }
     const r = await wx.showModal({ title: '确认购买', content: `确定要购买「${p.title}」吗？\n金额：¥${p.price}` });
     if (!r.confirm) return;

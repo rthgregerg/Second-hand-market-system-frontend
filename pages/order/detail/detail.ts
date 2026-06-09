@@ -17,7 +17,7 @@ Page({
   async loadOrder() {
     try {
       const res = await getOrderDetail(this.id);
-      const app = getApp<GlobalData>();
+      const app = getApp<IAppOption>();
       const order = res.data;
       this.setData({
         order,

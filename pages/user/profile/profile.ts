@@ -5,7 +5,7 @@ Page({
   },
 
   onShow() {
-    const app = getApp<GlobalData>();
+    const app = getApp<IAppOption>();
     this.setData({ userInfo: app.globalData.userInfo, isAdmin: app.globalData.isAdmin });
   },
 
@@ -13,7 +13,7 @@ Page({
   onMyProducts() { wx.navigateTo({ url: '/pages/user/my-products/my-products' }); },
   onFavorites() { wx.navigateTo({ url: '/pages/user/favorites/favorites' }); },
   onReviews() {
-    const app = getApp<GlobalData>();
+    const app = getApp<IAppOption>();
     wx.navigateTo({ url: `/pages/user/reviews/reviews?id=${app.globalData.userId}&name=${app.globalData.userInfo?.nickname || '我'}` });
   },
   onAdmin() { wx.navigateTo({ url: '/pages/admin/panel/panel' }); },
@@ -23,7 +23,7 @@ Page({
       title: '确认退出登录？',
       success: (res) => {
         if (!res.confirm) return;
-        const app = getApp<GlobalData>();
+        const app = getApp<IAppOption>();
         app.globalData.token = null;
         app.globalData.userId = null;
         app.globalData.userInfo = null;

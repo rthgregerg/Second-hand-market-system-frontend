@@ -9,7 +9,7 @@ Page({
     messages: [] as ChatMessage[],
     inputText: '',
     scrollToView: '',
-    appUserId: getApp<GlobalData>().userId,
+    appUserId: getApp<IAppOption>().globalData.userId,
     wsConnected: false,
   },
   socketTask: null as WechatMiniprogram.SocketTask | null,
@@ -33,7 +33,7 @@ Page({
 
   /** WebSocket 连接: ws://localhost:8080/ws/chat/{userId}?token={jwtToken} */
   connectWebSocket() {
-    const app = getApp<GlobalData>();
+    const app = getApp<IAppOption>();
     const token = app.globalData.token || '';
     const userId = app.globalData.userId;
     if (!token || !userId) return;

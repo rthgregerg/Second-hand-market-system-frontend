@@ -24,7 +24,7 @@ Page({
   },
 
   onShow() {
-    getApp<GlobalData>().fetchUnreadCount();
+    getApp<IAppOption>().fetchUnreadCount();
   },
 
   async loadCategories() {

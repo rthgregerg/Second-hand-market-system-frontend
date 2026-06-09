@@ -160,3 +160,10 @@ interface GlobalData {
   unreadCount: number;
   isAdmin: boolean;
 }
+
+/** App 实例 */
+interface IAppOption {
+  globalData: GlobalData;
+  fetchUserInfo(): void;
+  fetchUnreadCount(): void;
+}

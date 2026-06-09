@@ -19,7 +19,7 @@ Page({
     try {
       const res = await getUnreadCount();
       this.setData({ unreadNotificationCount: res.data?.notificationCount || 0 });
-      getApp<GlobalData>().fetchUnreadCount();
+      getApp<IAppOption>().fetchUnreadCount();
     } catch {}
   },
 

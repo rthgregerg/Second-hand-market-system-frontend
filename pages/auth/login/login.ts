@@ -41,7 +41,7 @@ Page({
   },
 
   saveAuth(data: { token: string; userId: number; username: string; role: string }) {
-    const app = getApp<GlobalData>();
+    const app = getApp<IAppOption>();
     app.globalData.token = data.token;
     app.globalData.userId = data.userId;
     app.globalData.isAdmin = data.role === 'ADMIN';

@@ -7,6 +7,7 @@
     "miniprogram-api-typings": "^3.12.2"
   },
   "devDependencies": {
-    "miniprogram-api-typings": "^3.12.2"
+    "miniprogram-api-typings": "^3.12.2",
+    "typescript": "^6.0.3"
   }
 }

@@ -7,7 +7,7 @@ Page({
     oldPassword: '', newPassword: '', showPasswordForm: false,
   },
   onShow() {
-    const info = getApp<GlobalData>().userInfo;
+    const info = getApp<IAppOption>().globalData.userInfo;
     if (info) this.setData({ nickname: info.nickname || '', avatar: info.avatar || '', bio: info.bio || '', email: info.email || '' });
   },
   onNickInput(e: any) { this.setData({ nickname: e.detail.value }); },
@@ -21,7 +21,7 @@ Page({
     try {
       await updateProfile({ nickname: this.data.nickname || undefined, avatar: this.data.avatar || undefined, bio: this.data.bio || undefined, email: this.data.email || undefined });
       showToast('保存成功', 'success');
-      getApp<GlobalData>().fetchUserInfo();
+      getApp<IAppOption>().fetchUserInfo();
     } catch {}
   },
 

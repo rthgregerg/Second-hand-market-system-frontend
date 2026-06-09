@@ -8,7 +8,7 @@ Component({
   data: { stars: [] as number[] },
   observers: {
     'rating, max'(rating: number, max: number) {
-      const stars = [];
+      const stars: number[] = [];
       for (let i = 1; i <= max; i++) {
         stars.push(i <= rating ? 1 : 0);
       }

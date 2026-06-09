@@ -1,6 +1,6 @@
 import { request } from './api/request';
 
-App<GlobalData>({
+App<IAppOption>({
   globalData: {
     token: wx.getStorageSync('token') || null,
     userId: wx.getStorageSync('userId') || null,

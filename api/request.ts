@@ -11,7 +11,7 @@ export function request<T = any>(
   data?: any,
   options: RequestOptions = {}
 ): Promise<ApiResult<T>> {
-  const app = getApp<GlobalData>();
+  const app = getApp<IAppOption>();
   const token = app.globalData.token;
 
   if (options.showLoading) {

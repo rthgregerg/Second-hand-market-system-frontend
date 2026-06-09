@@ -1,7 +1,7 @@
 const BASE_URL = 'http://localhost:8080';
 
 export function uploadImages(files: string[]): Promise<string[]> {
-  const app = getApp<GlobalData>();
+  const app = getApp<IAppOption>();
   return new Promise((resolve, reject) => {
     wx.uploadFile({
       url: BASE_URL + '/api/v1/files/upload',
