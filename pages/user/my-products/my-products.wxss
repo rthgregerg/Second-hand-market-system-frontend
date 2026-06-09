@@ -1,0 +1,14 @@
+.mpage { min-height: 100vh; background: #F5F5F5; display: flex; flex-direction: column; }
+.status-bar { display: flex; padding: 16rpx 24rpx; background: #fff; gap: 16rpx; }
+.stab { padding: 10rpx 24rpx; background: #F2F2F7; border-radius: 48rpx; font-size: 24rpx; }
+.stab.active { background: #1A1A1A; color: #fff; }
+.mlist { flex: 1; padding: 16rpx 24rpx; }
+.mitem { display: flex; padding: 16rpx; margin-bottom: 16rpx; }
+.mimg { width: 160rpx; height: 120rpx; border-radius: 12rpx; flex-shrink: 0; background: #F2F2F7; }
+.minfo { flex: 1; margin-left: 20rpx; display: flex; flex-direction: column; justify-content: space-between; }
+.mtitle { font-size: 28rpx; display: block; }
+.mstatus { font-size: 22rpx; color: #8E8E93; }
+.mactions { display: flex; flex-direction: column; justify-content: center; gap: 12rpx; margin-left: 12rpx; }
+.ma { font-size: 24rpx; color: #2B7BD6; padding: 8rpx; }
+.loading-more { text-align: center; padding: 32rpx; }
+.loading-text { font-size: 24rpx; color: #C7C7CC; }

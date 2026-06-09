@@ -1,0 +1,24 @@
+<view class="profile-page">
+  <view class="profile-header card">
+    <image src="{{userInfo.avatar}}" class="profile-avatar" mode="aspectFill" />
+    <view class="profile-info">
+      <text class="profile-name">{{userInfo.nickname || userInfo.username || '未设置'}}</text>
+      <view class="credit-row"><text class="credit-score">信誉分: {{userInfo.creditScore || 0}}</text></view>
+    </view>
+    <text class="profile-arrow" bindtap="onEditProfile">›</text>
+  </view>
+
+  <view class="menu-section card">
+    <view class="menu-item" bindtap="onMyProducts"><text>我的发布</text><text class="menu-arrow">›</text></view>
+    <view class="menu-item" bindtap="onFavorites"><text>我的收藏</text><text class="menu-arrow">›</text></view>
+    <view class="menu-item" bindtap="onReviews"><text>我的评价</text><text class="menu-arrow">›</text></view>
+  </view>
+
+  <view wx:if="{{isAdmin}}" class="menu-section card">
+    <view class="menu-item admin-item" bindtap="onAdmin"><text>🔧 管理后台</text><text class="menu-arrow">›</text></view>
+  </view>
+
+  <view class="logout-section">
+    <button class="btn-secondary" bindtap="onLogout" style="width:100%">退出登录</button>
+  </view>
+</view>

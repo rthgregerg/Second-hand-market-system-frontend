@@ -1,0 +1,13 @@
+.profile-page { min-height: 100vh; background: #F5F5F5; padding: 24rpx; }
+.profile-header { display: flex; align-items: center; padding: 32rpx; margin-bottom: 24rpx; }
+.profile-avatar { width: 120rpx; height: 120rpx; border-radius: 50%; background: #F2F2F7; flex-shrink: 0; }
+.profile-info { flex: 1; margin-left: 24rpx; }
+.profile-name { font-size: 36rpx; font-weight: 700; display: block; }
+.credit-row { margin-top: 12rpx; }
+.credit-score { font-size: 26rpx; color: #2B7BD6; background: #E8F0FE; padding: 6rpx 16rpx; border-radius: 24rpx; }
+.profile-arrow { font-size: 40rpx; color: #C7C7CC; }
+.menu-section { margin-bottom: 24rpx; }
+.menu-item { display: flex; justify-content: space-between; align-items: center; padding: 24rpx; border-bottom: 1rpx solid #F2F2F7; font-size: 30rpx; }
+.menu-item:last-child { border-bottom: none; }
+.menu-arrow { color: #C7C7CC; font-size: 32rpx; }
+.logout-section { margin-top: 48rpx; }

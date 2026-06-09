@@ -1,0 +1,4 @@
+.edit-page { min-height: 100vh; background: #F5F5F5; }
+.form-group { margin-bottom: 24rpx; }
+.form-label { font-size: 28rpx; color: #1A1A1A; display: block; margin-bottom: 8rpx; }
+.textarea-field { background: #F2F2F7; border-radius: 16rpx; padding: 16rpx 24rpx; width: 100%; min-height: 120rpx; font-size: 28rpx; }

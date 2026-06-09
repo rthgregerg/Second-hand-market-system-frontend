@@ -1,0 +1,31 @@
+<view class="admin-page">
+  <view class="admin-tabs">
+    <view class="atab {{tabIndex === 0 ? 'active' : ''}}" data-tab="0" bindtap="onTabChange"><text>统计</text></view>
+    <view class="atab {{tabIndex === 1 ? 'active' : ''}}" data-tab="1" bindtap="onTabChange"><text>用户管理</text></view>
+  </view>
+
+  <view wx:if="{{tabIndex === 0}}" class="stats-panel">
+    <view class="stat-card card" wx:for="{{stats}}" wx:key="*this">
+      <text class="stat-key">{{index}}</text>
+      <text class="stat-val">{{item}}</text>
+    </view>
+    <empty-state wx:if="{{Object.keys(stats).length === 0}}" text="暂无统计数据" icon="📊" />
+  </view>
+
+  <view wx:if="{{tabIndex === 1}}">
+    <view class="user-search">
+      <input class="input-field" placeholder="搜索用户名/手机号" value="{{keyword}}" bindinput="onKeywordInput" bindconfirm="onSearch" />
+      <button class="btn-primary btn-sm" bindtap="onSearch">搜索</button>
+    </view>
+    <view wx:for="{{users}}" wx:key="id" class="user-item card">
+      <image src="{{item.avatar}}" class="uavatar" mode="aspectFill" />
+      <view class="uinfo">
+        <text class="uname">{{item.nickname || item.username}}</text>
+        <text class="uphone">{{item.phone}} · {{item.role}}</text>
+      </view>
+      <button class="{{(item.status ?? 0) === 0 ? 'btn-danger' : 'btn-primary'}} btn-sm" bindtap="onToggleUser" data-user="{{item}}">{{(item.status ?? 0) === 0 ? '禁用' : '启用'}}</button>
+    </view>
+    <view wx:if="{{loading}}" class="loading-more"><text class="loading-text">加载中...</text></view>
+    <empty-state wx:if="{{!loading && users.length === 0}}" text="暂无用户" icon="👤" />
+  </view>
+</view>

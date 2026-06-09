@@ -1,0 +1,10 @@
+.fav-page { min-height: 100vh; background: #F5F5F5; padding: 16rpx 24rpx; }
+.fav-item { display: flex; align-items: center; padding: 16rpx; margin-bottom: 16rpx; }
+.fav-img { width: 160rpx; height: 120rpx; border-radius: 12rpx; flex-shrink: 0; background: #F2F2F7; }
+.fav-info { flex: 1; margin-left: 20rpx; overflow: hidden; }
+.fav-title { font-size: 28rpx; display: block; margin-bottom: 8rpx; }
+.fav-meta { font-size: 22rpx; color: #8E8E93; margin-top: 8rpx; display: block; }
+.fav-action { flex-shrink: 0; margin-left: 16rpx; }
+.fav-action text { font-size: 24rpx; color: #FF3B30; }
+.loading-more { text-align: center; padding: 32rpx; }
+.loading-text { font-size: 24rpx; color: #C7C7CC; }

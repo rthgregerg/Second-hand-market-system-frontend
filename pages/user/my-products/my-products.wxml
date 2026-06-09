@@ -1,0 +1,21 @@
+<view class="mpage">
+  <view class="status-bar">
+    <view wx:for="{{['全部','在售','已售','已下架']}}" wx:key="*this" class="stab {{statusFilter === (index === 0 ? 0 : index) ? 'active' : ''}}" data-status="{{index === 0 ? 0 : index}}" bindtap="onStatusTap"><text>{{item}}</text></view>
+  </view>
+  <scroll-view scroll-y class="mlist" bindscrolltolower="onReachBottom">
+    <view wx:for="{{products}}" wx:key="id" class="mitem card">
+      <image src="{{item.images[0]}}" mode="aspectFill" class="mimg" />
+      <view class="minfo">
+        <text class="mtitle ellipsis">{{item.title}}</text>
+        <text class="price" style="font-size:32rpx;">{{item.price}}</text>
+        <text class="mstatus">{{statusMap[item.status] || '未知'}} · {{item.createdAt}}</text>
+      </view>
+      <view class="mactions">
+        <text class="ma" bindtap="toggleShelf" data-product="{{item}}">{{item.status === 1 ? '下架' : (item.status === 3 ? '上架' : '')}}</text>
+        <text class="ma" bindtap="onEdit" data-id="{{item.id}}">编辑</text>
+      </view>
+    </view>
+    <empty-state wx:if="{{!loading && products.length === 0}}" text="暂无发布的商品" icon="📦" />
+    <view wx:if="{{loading}}" class="loading-more"><text class="loading-text">加载中...</text></view>
+  </scroll-view>
+</view>

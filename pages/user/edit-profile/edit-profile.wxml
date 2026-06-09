@@ -1,0 +1,16 @@
+<view class="edit-page">
+  <view style="padding:24rpx;background:#fff;margin-bottom:24rpx;">
+    <view class="form-group"><text class="form-label">昵称</text><input class="input-field" value="{{nickname}}" bindinput="onNickInput" /></view>
+    <view class="form-group"><text class="form-label">简介</text><textarea class="textarea-field" value="{{bio}}" bindinput="onBioInput" maxlength="200" /></view>
+    <view class="form-group"><text class="form-label">邮箱</text><input class="input-field" value="{{email}}" bindinput="onEmailInput" /></view>
+    <button class="btn-primary" bindtap="onSave">保存</button>
+  </view>
+  <view style="padding:24rpx;background:#fff;">
+    <view bindtap="togglePw" style="padding:16rpx 0;"><text>{{showPasswordForm ? '收起' : '修改密码 ›'}}</text></view>
+    <block wx:if="{{showPasswordForm}}">
+      <input class="input-field" type="password" placeholder="旧密码" value="{{oldPassword}}" bindinput="onOldPwInput" style="margin-bottom:24rpx;" />
+      <input class="input-field" type="password" placeholder="新密码（6-32位）" value="{{newPassword}}" bindinput="onNewPwInput" />
+      <button class="btn-primary" bindtap="onChangePassword" style="margin-top:24rpx;">确认修改密码</button>
+    </block>
+  </view>
+</view>

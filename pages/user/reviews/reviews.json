@@ -1,0 +1,1 @@
+{ "usingComponents": { "empty-state": "/components/empty-state/empty-state", "star-rating": "/components/star-rating/star-rating" }, "navigationBarTitleText": "用户评价" }

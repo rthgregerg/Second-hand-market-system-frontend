@@ -1,0 +1,17 @@
+<view class="reviews-page">
+  <view class="score-header card">
+    <text class="score-num">{{creditScore}}</text>
+    <text class="score-label">信誉分</text>
+  </view>
+  <view wx:for="{{reviews}}" wx:key="id" class="review-item card">
+    <view class="review-top">
+      <image src="{{item.reviewerAvatar}}" class="review-avatar" mode="aspectFill" />
+      <text class="review-name">{{item.reviewerName}}</text>
+      <star-rating rating="{{item.rating}}" size="28" />
+      <text class="review-time">{{item.createdAt}}</text>
+    </view>
+    <text wx:if="{{item.content}}" class="review-content">{{item.content}}</text>
+  </view>
+  <empty-state wx:if="{{!loading && reviews.length === 0}}" text="暂无评价" icon="⭐" />
+  <view wx:if="{{loading}}" class="loading-more"><text class="loading-text">加载中...</text></view>
+</view>

@@ -1,0 +1,13 @@
+<view class="fav-page">
+  <view wx:for="{{products}}" wx:key="id" class="fav-item card" bindtap="onProductTap" data-id="{{item.id}}">
+    <image src="{{item.images[0]}}" mode="aspectFill" class="fav-img" />
+    <view class="fav-info">
+      <text class="fav-title ellipsis">{{item.title}}</text>
+      <text class="price" style="font-size:32rpx;">{{item.price}}</text>
+      <text class="fav-meta">{{item.location}} · {{item.createdAt}}</text>
+    </view>
+    <view class="fav-action" catchtap="onUnfavorite" data-id="{{item.id}}"><text>取消收藏</text></view>
+  </view>
+  <empty-state wx:if="{{!loading && products.length === 0}}" text="暂无收藏" icon="♡" />
+  <view wx:if="{{loading}}" class="loading-more"><text class="loading-text">加载中...</text></view>
+</view>
