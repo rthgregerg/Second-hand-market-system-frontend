@@ -1,0 +1,12 @@
+{
+  "name": "second-hand-market-miniprogram",
+  "version": "1.0.0",
+  "description": "二手交易平台微信小程序",
+  "main": "app.ts",
+  "dependencies": {
+    "miniprogram-api-typings": "^3.12.2"
+  },
+  "devDependencies": {
+    "miniprogram-api-typings": "^3.12.2"
+  }
+}

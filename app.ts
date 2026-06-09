@@ -1,4 +1,5 @@
-// app.ts
+import { request } from './api/request';
+
 App<GlobalData>({
   globalData: {
     token: wx.getStorageSync('token') || null,
@@ -16,7 +17,6 @@ App<GlobalData>({
   },
 
   fetchUserInfo() {
-    const { request } = require('./api/request');
     request('GET', '/api/v1/user/profile').then((res: ApiResult<UserInfo>) => {
       this.globalData.userInfo = res.data;
       this.globalData.isAdmin = res.data.role === 'ADMIN';
@@ -25,7 +25,6 @@ App<GlobalData>({
   },
 
   fetchUnreadCount() {
-    const { request } = require('./api/request');
     request('GET', '/api/v1/messages/unread').then((res: ApiResult<Record<string, number>>) => {
       const total = Object.values(res.data || {}).reduce((a, b) => a + b, 0);
       this.globalData.unreadCount = total;
