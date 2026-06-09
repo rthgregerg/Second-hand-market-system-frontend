@@ -17,7 +17,7 @@ Page({
   async loadUnread() {
     try {
       const res = await getUnreadCount();
-      this.setData({ unreadNotificationCount: res.data?.notification || 0 });
+      this.setData({ unreadNotificationCount: res.data?.notificationCount || 0 });
       getApp<GlobalData>().fetchUnreadCount();
     } catch {}
   },
